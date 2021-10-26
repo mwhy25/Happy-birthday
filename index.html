@@ -31,6 +31,16 @@
 </head>
 
 <body>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="gooey">
+				<!-- in="sourceGraphic" -->
+				<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+				<feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+				<feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+			</filter>
+		</defs>
+	</svg>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="happy.mp3"></source>
@@ -157,19 +167,10 @@
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
-					<div id="button_play">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-							<defs>
-								<filter id="gooey">
-									<!-- in="sourceGraphic" -->
-									<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-									<feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-									<feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-								</filter>
-							</defs>
-						</svg>
+					
 						
-						<button id="turn_on" class="roundo gooey-button ">
+						
+						<button id="turn_on" class="roundo gooey-button">
 							Touch Me!
 							<span class="bubbles">
 								<span class="bubble"></span>
@@ -184,7 +185,7 @@
 								<span class="bubble"></span>
 							</span>
 						</button>
-						</div>
+					
 					<!-- <button class="btn btn-primary" id="turn_on">Turn On Lights</button> -->
 					<button class="btn btn-primary" id="play">Play Music</button>
 					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>

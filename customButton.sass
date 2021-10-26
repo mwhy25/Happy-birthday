@@ -1,8 +1,10 @@
+$prime: #00FF80
+$second: #0c1016
 
 body,
 html
     align-items: center
-    background-color: #0c1016
+    background-color: $second
     display: flex
     font-family: 'Roboto'
     font-size: 10px
@@ -19,20 +21,15 @@ svg
     position: absolute
     top: -4000px
     left: -4000px
-.roundo
-  display: block
-  width: 100px
-  height: 100px
-  border-radius: 50%
 
 #gooey-button
     padding: 1rem
     font-size: 2rem
     border: none
-    color: #0c1016
+    color: $second
     filter: url('#gooey')
     position: relative
-    background-color: #FFEDDE
+    background-color: $prime
 
     &:focus
         outline: none
@@ -45,7 +42,7 @@ svg
         right: 0
 
         .bubble
-            background-color: #FFEDDE
+            background-color: $prime
             border-radius: 100%
             position: absolute
             top: 0

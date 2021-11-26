@@ -191,8 +191,12 @@ $('document').ready(function(){
 		}
 		
 		msgLoop(0);
+		$('#story').fadeOut('slow').promise().done(function(){
+			$('#after').fadeIn('slow');
+		});
 		
 	});
+	
 });
 
 
